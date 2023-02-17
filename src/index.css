@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+
+#root {
+  overflow: auto;
+}
+
+body {
+  /* position: fixed; */
+  /* overflow: hidden; */
+  /* overscroll-behavior-y: none; */
+  font-family: roboto;
+  color: black;
+  background: hotpink;
+  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
+      39 39,
+    auto;
+  image-rendering: pixelated;
+}
+
+.startup {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: white;
+  font-size: 1.2em;
+}
+
+.header {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  -webkit-text-stroke: 0.02em rgb(255, 59, 173);
+  text-shadow: 0.04em 0.04em 0.04em rgb(255, 59, 173);
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: 0.02em rgb(255, 59, 173);
+  text-shadow: 0.04em 0.04em 0.04em rgb(255, 59, 173);
+}
+
+.bodyJson {
+  height: max-content;
+  overflow-y: scroll;
+}
+
+.aqua-cta {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 80px;
+  height: 80px;
+  transition: 2s width cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.aqua-cta:hover {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+}
+
+@media (min-width: 600px) {
+  .header {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
 }
